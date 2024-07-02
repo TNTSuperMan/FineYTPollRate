@@ -1,0 +1,1 @@
+{"manifest_version":3,"name":"FineYTPollRate","version":"0.0.1","description":"YouTubeアンケートを、より細かく。","content_scripts":[{"matches":["https://www.youtube.com/*"],"js":["content.js"]}]}

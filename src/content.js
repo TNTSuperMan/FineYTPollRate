@@ -1,15 +1,15 @@
-new MutationObserver(evs=>{
+new MutationObserver(n=>
     document.querySelectorAll("div.choice-info>div.text-area>yt-formatted-string.vote-percentage").forEach(e=>{
         e.parentNode.parentNode.childNodes.forEach(t=>{
             if(t.classList && t.classList.contains("progress-bar")){
-                if(e.textContent != t.style.width){
-                    e.textContent = t.style.width
+                if(e.innerText != t.style.width){
+                    e.innerText = t.style.width
                 }
                 e.removeAttribute("is-empty")
             }
         })
     })
-}).observe(document.querySelector("ytd-app"),{
+).observe(document.querySelector("ytd-app"),{
     subtree: true,
     attributes: true,
     childList: true,
